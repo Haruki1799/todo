@@ -8,7 +8,7 @@
 
 <div class="Todo-form__message">
     <div class="Todo-form__message--heading">
-        <h2>Todo作成しました</h2>
+        Todo作成しました
     </div>
 </div>
 
