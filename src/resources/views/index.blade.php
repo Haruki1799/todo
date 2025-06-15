@@ -7,9 +7,20 @@
 @section('content')
 
 <div class="Todo-form__message">
-    <div class="Todo-form__message--heading">
-        Todo作成しました
+    @if ($errors->any())
+    <div class="Todo-form__message--error">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
     </div>
+    @endif
+    @if(session('message'))
+    <div class="Todo-form__message--heading">
+        {{session('message')}}
+    </div>
+    @endif
 </div>
 
 <div class="Todo-form__content">
@@ -18,11 +29,7 @@
         <div class="Todo-form__input">
             <input class="Todo-form__input--text" type="text" name="content" placeholder="新しいタスクを入力" value="{{ old('todo') }}" />
         </div>
-        <!-- <div class="Todo-form__error">
-            @error('name')
-            {{ $message }}
-            @enderror
-        </div> -->
+
         <div class="Todo-form__input--button">
             <button class="Todo-form__button-submit" type="submit">作成</button>
         </div>
