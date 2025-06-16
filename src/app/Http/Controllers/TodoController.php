@@ -8,12 +8,13 @@ use App\Http\Requests\TodoRequest;
 
 class TodoController extends Controller
 {
-public function index()
-{
-    $todos = Todo::all();
+    public function index()
+    {
+        $todos = Todo::all();
 
-    return view('index', compact('todos'));
-}
+        return view('index', compact('todos'));
+    }
+
     public function store(TodoRequest $request)
     {
         $todo = $request->only(['content']);
@@ -24,7 +25,23 @@ public function index()
         return redirect('/');
     }
 
+    public function update(TodoRequest $request)
+    {
+        $todo = $request->only(['content']);
+        Todo::find($request->id)->update($todo);
+        
+        session()->flash('message', 'Todoを更新しました');
 
+        return redirect('/');
+    }
+
+    public function destroy(Request $request)
+    {
+        Todo::find($request->id)->delete();
+        session()->flash('message', 'Todoを削除しました');
+
+        return redirect('/');
+    }
 
 }
 
