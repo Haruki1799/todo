@@ -3,6 +3,9 @@
 }
 
 .header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
     padding: 20px 15px;
     max-width: 1230px;
@@ -13,4 +16,11 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
+}
+
+
+.header-nav-item {
+    color: #fff;
+    text-decoration: none;
+
 }
