@@ -24,10 +24,16 @@
 </div>
 
 <div class="Todo-form__content">
+    <div class="Todo-form__title">
+        <h2>新規作成</h2>
+    </div>
     <form action="/todos" class="Todo-form" method="post">
         @csrf
         <div class="Todo-form__input">
             <input class="Todo-form__input--text" type="text" name="content" placeholder="新しいタスクを入力" value="{{ old('todo') }}" />
+            <select class="Todo-form__input--category">
+                <option value="">カテゴリ</option>
+            </select>
         </div>
 
         <div class="Todo-form__input--button">
@@ -35,11 +41,30 @@
         </div>
     </form>
 
+    <div class="Todo-form__title">
+        <h2>Todo検索</h2>
+    </div>
+    <form action="/todos" class="Todo-form-search" method="post">
+        @csrf
+        <div class="Todo-form-search__input">
+            <input class="Todo-form-search__input--text" type="text" name="content" value="{{ old('todo') }}" />
+            <select class="Todo-form-search__input--category">
+                <option value="">カテゴリ</option>
+            </select>
+        </div>
+
+        <div class="Todo-form-search__input--button">
+            <button class="Todo-form-search__button-submit" type="submit">検索</button>
+        </div>
+    </form>
 
     <div class="Todo-table">
         <table class="Todo-table__list">
             <tr class="Todo-table__row">
-                <th class="Todo-table__header">Todo</th>
+                <th class="Todo-table__header">
+                    <span class="Todo-table__header-span">Todo</span>
+                    <span class="Todo-table__header-span">カテゴリ</span>
+                </th>
             </tr>
             @foreach ($todos as $todo)
             <tr class="Todo-table__row">
@@ -51,7 +76,10 @@
                             <input class="Todo-form-update__item--text" type="text" name="content" value="{{$todo['content']}}">
                             <input type="hidden" name="id" value="{{$todo['id']}}">
                         </div>
-                        <div class="update__button">
+                        <div class="Todo-form-update__item">
+                            <p class="Todo-form-update__item-category">Category 1</p>
+                        </div>
+                        <div class=" update__button">
                             <button class="update__button-submit" type="submit">更新</button>
                         </div>
                     </form>
