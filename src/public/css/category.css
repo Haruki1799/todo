@@ -1,0 +1,148 @@
+.category-form__message--error ul {
+    background: #f8d7da;
+    margin: 0 auto;
+    padding: 20px, 15px;
+    max-width: 100%;
+    color: #842029;
+    font-size: 24px
+}
+
+.category-form__message--heading {
+    background: #d1e7dd;
+    margin: 0 auto;
+    padding: 20px, 15px;
+    max-width: 100%;
+    color: #0f5132;
+    font-size:24px
+}
+
+.category-form__content {
+    margin: 0 auto;
+    width: 1230pt;
+}
+
+.category-form__title {
+    margin: 0, auto;
+    width: 50%;
+    text-align: center;
+}
+
+.category-form,.Todo-form-search {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.category-form__input,.Todo-form-search__input {
+    padding: 0 5px;
+    width: 50%;
+    display: flex;
+}
+
+.category-form__input--text,.Todo-form-search__input--text{
+    margin-right: 20px;
+    padding: 10px;
+    width: 70%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.category-form__input--category,.Todo-form-search__input--category {
+    padding: 10px;
+    width: 30%;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    appearance: none;
+}
+
+.category-form__input--button ,.Todo-form-search__input--button{
+    padding: 0 5px;
+    width: 120px;
+}
+
+.category-form__button-submit,.Todo-form-search__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.category-table {
+    margin: 50px auto;
+    width: 40%;
+    text-align: left;
+}
+
+.category-table__row {
+    border-bottom:1px solid #ccc;
+}
+
+.category-table__header {
+    width: 20%;
+    text-align: left;
+    font-weight: bold;
+}
+
+.category-table__header-span {
+    margin-right: 40%;
+}
+
+.category-table__item {
+    padding: 10px;
+}
+
+.category-table__item:first-of-type {
+    width: 90%;
+}
+
+.category-form-update__item--text {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.category-form-update__button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.update__button {
+    padding: 0 5px;
+    width: 70px;
+}
+
+.update__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #0000ff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.delete__button {
+    padding: 0 5px;
+    width: 70px;
+}
+
+.delete__button-submit {
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-radius: 3px;
+    background: #ff0000;
+    color: #fff;
+    cursor: pointer;
+}
