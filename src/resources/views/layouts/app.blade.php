@@ -17,7 +17,7 @@
                 Todo
             </a>
             <nav class="header-nav">
-                <a class="header-nav-item" href="/">
+                <a class="header-nav-item" href="/categories">
                     カテゴリ一覧
                 </a>
             </nav>
