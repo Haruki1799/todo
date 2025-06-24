@@ -109,18 +109,18 @@
     border: none;
 }
 
-.category-form-update__button {
+.category-form-update {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.update__button {
+.category-form-update__button {
     padding: 0 5px;
     width: 70px;
 }
 
-.update__button-submit {
+.category-form-update__button-submit {
     padding: 10px;
     width: 100%;
     height: 40px;
@@ -131,12 +131,12 @@
     cursor: pointer;
 }
 
-.delete__button {
+.category-form-delete__button {
     padding: 0 5px;
     width: 70px;
 }
 
-.delete__button-submit {
+.category-form-delete__button-submit {
     padding: 10px;
     width: 100%;
     height: 40px;
